@@ -47,7 +47,7 @@ El sistema utiliza:
 
 #  Estructura del proyecto
 
-
+```bash
 video_game_recommender/
 │
 ├── app.py
@@ -67,7 +67,7 @@ video_game_recommender/
 │       └── default.jpg
 │
 └── README.md
-
+```
 
 ---
 
