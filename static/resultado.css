@@ -1,0 +1,391 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        linear-gradient(
+            180deg,
+            #0b0f1a,
+            #111827,
+            #09090f
+        );
+
+    color: white;
+
+    min-height: 100vh;
+
+    padding: 40px 20px;
+
+    overflow-x: hidden;
+}
+
+/* ==========================================
+   CONTENEDOR
+========================================== */
+
+.results-container{
+
+    width: 100%;
+    max-width: 1400px;
+
+    margin: auto;
+}
+
+/* ==========================================
+   TITULO
+========================================== */
+
+.results-title{
+
+    text-align: center;
+
+    font-size: 55px;
+
+    margin-bottom: 40px;
+
+    font-weight: bold;
+
+    background: linear-gradient(
+        90deg,
+        #00ffe7,
+        #7c4dff,
+        #ff00ff
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+        0px 0px 15px rgba(0,255,231,0.4);
+}
+
+/* ==========================================
+   PERFIL
+========================================== */
+
+.profile-box{
+
+    width: 100%;
+    max-width: 700px;
+    
+    margin: 20PX auto 50px auto;
+
+    background:
+        rgba(20,20,35,0.9);
+
+    border:
+
+        1px solid rgba(0,255,231,0.2);
+
+    border-radius: 25px;
+
+    padding: 30px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0px 0px 30px rgba(0,255,231,0.1);
+}
+
+.profile-box h2{
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    font-size: 30px;
+
+    color: #00ffe7;
+
+    letter-spacing: 1px;
+}
+
+.profile-item{
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 14px 18px;
+
+    margin-bottom: 10px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,255,255,0.03);
+
+    transition: 0.3s;
+}
+
+.profile-item:hover{
+
+    transform: scale(1.02);
+
+    background:
+        rgba(0,255,231,0.08);
+}
+
+.profile-item span:first-child{
+
+    color: #cbd5e1;
+
+    font-weight: bold;
+}
+
+.profile-item span:last-child{
+
+    color: #00ffe7;
+
+    font-weight: bold;
+}
+
+/* ==========================================
+   GRID RECOMENDACIONES
+========================================== */
+
+.recommendations-grid{
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(320px, 1fr));
+
+    gap: 30px;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.recommendation-card{
+
+    background:
+        rgba(15,15,30,0.95);
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(124,77,255,0.2);
+
+    transition: 0.4s;
+
+    position: relative;
+
+    box-shadow:
+        0px 0px 25px rgba(0,0,0,0.4);
+}
+
+.recommendation-card:hover{
+
+    transform:
+        translateY(-10px)
+        scale(1.02);
+
+    box-shadow:
+        0px 0px 35px rgba(124,77,255,0.5);
+}
+
+/* ==========================================
+   IMAGEN
+========================================== */
+
+.recommendation-image{
+
+    width: 100%;
+
+    height: 320px;
+
+    object-fit: cover;
+
+    border-bottom:
+        2px solid rgba(0,255,231,0.2);
+}
+
+/* ==========================================
+   CONTENIDO
+========================================== */
+
+.recommendation-content{
+
+    padding: 25px;
+}
+
+.recommendation-content h2{
+
+    font-size: 28px;
+
+    margin-bottom: 15px;
+
+    color: #ffffff;
+
+    line-height: 1.2;
+}
+
+.recommendation-content p{
+
+    color: #cbd5e1;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+
+    font-size: 15px;
+
+    min-height: 100px;
+}
+
+/* ==========================================
+   INFO
+========================================== */
+
+.recommendation-info{
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 15px;
+}
+
+.recommendation-info span{
+
+    background:
+        rgba(0,255,231,0.08);
+
+    color: #00ffe7;
+
+    padding: 10px 15px;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    border:
+        1px solid rgba(0,255,231,0.1);
+}
+
+/* ==========================================
+   BOTON
+========================================== */
+
+.restart-container{
+
+    margin-top: 60px;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.restart-button{
+
+    text-decoration: none;
+
+    padding:
+        18px 40px;
+
+    border-radius: 16px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    background:
+        linear-gradient(
+            90deg,
+            #00ffe7,
+            #7c4dff
+        );
+
+    color: black;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0px 0px 20px rgba(0,255,231,0.3);
+}
+
+.restart-button:hover{
+
+    transform:
+        scale(1.05);
+
+    box-shadow:
+        0px 0px 30px rgba(124,77,255,0.6);
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+
+    background: #111827;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:
+        linear-gradient(
+            #00ffe7,
+            #7c4dff
+        );
+
+    border-radius: 20px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width: 768px){
+
+    .results-title{
+
+        font-size: 38px;
+    }
+
+    .recommendation-image{
+
+        height: 250px;
+    }
+
+    .recommendation-content h2{
+
+        font-size: 22px;
+    }
+
+    .profile-box{
+
+        padding: 20px;
+    }
+}

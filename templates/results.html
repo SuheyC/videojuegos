@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Recomendaciones
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='resultado.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <div class="results-container">
+
+        <!-- TITULO -->
+
+        <h1 class="results-title">
+            Tus recomendaciones
+        </h1>
+
+        <!-- RECOMENDACIONES -->
+
+        <div class="recommendations-grid">
+
+            {% for game in recommendations %}
+
+            <div class="recommendation-card">
+
+                <img
+                    src="{{ game['Imagen'] }}"
+                    alt="Juego"
+                    class="recommendation-image"
+                >
+
+                <div class="recommendation-content">
+
+                    <h2>
+                        {{ game["NOMBRE"] }}
+                    </h2>
+
+                    <p>
+                        {{ game["Descripcion"] }}
+                    </p>
+
+                    <div class="recommendation-info">
+
+                        <span>
+                            🎮 {{ game["GENERO"] }}
+                        </span>
+
+                        <span>
+                            ⭐ {{ game["User_Score"] }}
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+        <!-- PERFIL -->
+
+        <div class="profile-box">
+
+            <h2>
+                Perfil del usuario
+            </h2>
+
+            {% for key, value in profile.items() %}
+
+                <div class="profile-item">
+
+                    <span>
+                        {{ key }}
+                    </span>
+
+                    <span>
+                        {{ value }}
+                    </span>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+        <!-- BOTON -->
+
+        <div class="restart-container">
+
+            <a
+                href="/"
+                class="restart-button"
+            >
+                Reiniciar recomendaciones
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

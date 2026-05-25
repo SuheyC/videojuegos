@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Game Recommender</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+    <h1 class="title">
+
+        ROUND {{ round }}
+
+    </h1>
+
+    <div class="vs-container">
+
+        <!-- GAME 1 -->
+
+        <a href="/choose/{{ game1.row_id }}">
+
+            <div class="card">
+
+                <img
+                    src="{% if game1.Imagen and game1.Imagen != 'Sin imagen' %}{{ game1.Imagen }}{% else %}/static/images/default.jpg{% endif %}"
+                    alt="game image"
+                >
+
+                <h2>
+
+                    {{ game1.NOMBRE }}
+
+                </h2>
+
+                <p>
+
+                    {{ game1.GENERO }}
+
+                </p>
+
+                <p class="description">
+
+                    {{ game1.Descripcion }}
+
+                </p>
+
+            </div>
+
+        </a>
+
+        <!-- VS -->
+
+        <div class="vs-text">
+
+            VS
+
+        </div>
+
+        <!-- GAME 2 -->
+
+        <a href="/choose/{{ game2.row_id }}">
+
+            <div class="card">
+
+                <img
+                    src="{% if game2.Imagen and game2.Imagen != 'Sin imagen' %}{{ game2.Imagen }}{% else %}/static/images/default.jpg{% endif %}"
+                    alt="game image"
+                >
+
+                <h2>
+
+                    {{ game2.NOMBRE }}
+
+                </h2>
+
+                <p>
+
+                    {{ game2.GENERO }}
+
+                </p>
+
+                <p class="description">
+
+                    {{ game2.Descripcion }}
+
+                </p>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</body>
+
+</html>

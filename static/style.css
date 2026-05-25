@@ -1,0 +1,348 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #1a1f35,
+            #09090f 70%
+        );
+
+    color: white;
+
+    overflow-x: hidden;
+
+    padding: 20px;
+}
+
+/* ==========================================
+   TITULO
+========================================== */
+
+.title{
+
+    text-align: center;
+
+    font-size: 45px;
+
+    margin-bottom: 30px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #00ffe7,
+            #7c4dff,
+            #ff00ff
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+        0px 0px 20px rgba(0,255,231,0.3);
+}
+
+/* ==========================================
+   CONTENEDOR VS
+========================================== */
+
+.vs-container{
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+/* ==========================================
+   LINKS
+========================================== */
+
+a{
+
+    text-decoration: none;
+
+    color: inherit;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.card{
+
+    width: 320px;
+
+    min-height: 560px;
+
+    background:
+        rgba(15,15,30,0.95);
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    transition: 0.4s;
+
+    position: relative;
+
+    border:
+        2px solid rgba(124,77,255,0.2);
+
+    box-shadow:
+        0px 0px 30px rgba(0,0,0,0.5);
+
+    cursor: pointer;
+}
+
+.card:hover{
+
+    transform:
+        translateY(-8px)
+        scale(1.03);
+
+    box-shadow:
+        0px 0px 40px rgba(124,77,255,0.6);
+
+    border:
+        2px solid rgba(0,255,231,0.5);
+}
+
+/* ==========================================
+   IMAGEN
+========================================== */
+
+.card img{
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-bottom:
+        2px solid rgba(0,255,231,0.2);
+}
+
+/* ==========================================
+   TITULO CARD
+========================================== */
+
+.card h2{
+
+    font-size: 24px;
+
+    padding: 18px 18px 10px 18px;
+
+    color: white;
+
+    line-height: 1.2;
+}
+
+/* ==========================================
+   GENERO
+========================================== */
+
+.card p:not(.description){
+
+    margin-left: 18px;
+
+    margin-bottom: 15px;
+
+    display: inline-block;
+
+    background:
+        rgba(0,255,231,0.1);
+
+    color: #00ffe7;
+
+    padding:
+        8px 14px;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+
+    border:
+        1px solid rgba(0,255,231,0.2);
+
+    font-size: 14px;
+}
+
+/* ==========================================
+   DESCRIPCION
+========================================== */
+
+.description{
+
+    padding: 0px 18px 20px 18px;
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    max-height: 140px;
+
+    overflow: hidden;
+}
+
+/* ==========================================
+   VS
+========================================== */
+
+.vs-text{
+
+    font-size: 60px;
+
+    font-weight: bold;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ff0055,
+            #ff00ff
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+        0px 0px 30px rgba(255,0,100,0.6);
+
+    animation: pulse 1.5s infinite;
+}
+
+/* ==========================================
+   ANIMACION VS
+========================================== */
+
+@keyframes pulse{
+
+    0%{
+
+        transform: scale(1);
+    }
+
+    50%{
+
+        transform: scale(1.12);
+    }
+
+    100%{
+
+        transform: scale(1);
+    }
+}
+
+/* ==========================================
+   EFECTO BRILLO
+========================================== */
+
+.card::before{
+
+    content: "";
+
+    position: absolute;
+
+    top: -100%;
+
+    left: -100%;
+
+    width: 300%;
+
+    height: 300%;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255,255,255,0.05),
+            transparent
+        );
+
+    transform: rotate(25deg);
+
+    transition: 0.7s;
+}
+
+.card:hover::before{
+
+    top: -50%;
+
+    left: -50%;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width: 1000px){
+
+    .vs-container{
+
+        flex-direction: column;
+    }
+
+    .vs-text{
+
+        font-size: 50px;
+    }
+}
+
+@media(max-width: 500px){
+
+    .card{
+
+        width: 100%;
+    }
+
+    .title{
+
+        font-size: 35px;
+    }
+
+    .card img{
+
+        height: 200px;
+    }
+
+    .card h2{
+
+        font-size: 20px;
+    }
+
+    .description{
+
+        font-size: 13px;
+    }
+}
