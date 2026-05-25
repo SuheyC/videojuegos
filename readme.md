@@ -47,7 +47,7 @@ El sistema utiliza:
 
 #  Estructura del proyecto
 
-```bash
+
 video_game_recommender/
 │
 ├── app.py
@@ -189,7 +189,7 @@ model = NearestNeighbors(
     n_neighbors=10,
     metric="cosine"
 )
-```
+
 
 ---
 
