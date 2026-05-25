@@ -1,4 +1,4 @@
-````md
+
 # 🎮 Sistema Inteligente de Recomendación de Videojuegos
 
 Proyecto final de la materia de Inteligencia Artificial.
@@ -67,7 +67,7 @@ video_game_recommender/
 │       └── default.jpg
 │
 └── README.md
-````
+
 
 ---
 
